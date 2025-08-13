@@ -209,24 +209,10 @@ document.addEventListener("DOMContentLoaded", () => {
       `https://meet.google.com/jjj-cfmm-cia\n\n` +
       `Por favor, me confirme o agendamento.`;
 
-    // Verifica se é um dispositivo móvel
-    const isMobile =
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      );
-
-    let whatsappLink = "";
-    if (isMobile) {
-      // Usa o link otimizado para abrir o app no celular
-      whatsappLink = `whatsapp://send?phone=${meuWhatsApp}&text=${encodeURIComponent(
-        mensagem
-      )}`;
-    } else {
-      // Usa a API web para PC
-      whatsappLink = `https://api.whatsapp.com/send?phone=${meuWhatsApp}&text=${encodeURIComponent(
-        mensagem
-      )}`;
-    }
+    // Usa a API web do WhatsApp para todos os dispositivos
+    const whatsappLink = `https://api.whatsapp.com/send?phone=${meuWhatsApp}&text=${encodeURIComponent(
+      mensagem
+    )}`;
 
     window.open(whatsappLink, "_blank");
 
