@@ -13,7 +13,7 @@ O agendamento é feito de forma prática e direta, com envio automático de mens
 
 ## 🖼️ Captura de Tela
 <p align="center">
-  <img alt="Prévia do Sistema" width="700" src="https://github.com/user-attachments/assets/d98a2ac9-9a54-4fb4-bf8c-cdc4cdb17679" />
+  <img alt="Prévia do Sistema" width="700"src="https://github.com/user-attachments/assets/416a2bac-3002-4d44-81ba-14f14fcabb13" />
 </p>
 
 ## 🛠️ Tecnologias Utilizadas
