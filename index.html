@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitoria Natalia Salete Rodrigues</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <img
+          src="https://iftm.edu.br/images/logo/Horizontal%20resumida.png"
+          alt="Logo IFTM"
+          class="logo"
+        />
+        <h1>Monitoria de Linguagem de Programação e Estrutura de Dados</h1>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="profile-card">
+        <div class="profile-photo-container">
+          <img
+            src="https://avatars.githubusercontent.com/u/135389319?v=4"
+            alt="Foto de Natalia Salete Rodrigues"
+            class="profile-photo"
+          />
+        </div>
+        <h2 class="profile-name">Natalia Salete Rodrigues</h2>
+        <p class="profile-role">Monitora</p>
+      </section>
+
+      <section class="schedule-section">
+        <h3>Horários Disponíveis</h3>
+        <div class="schedule-grid">
+          <div class="schedule-item">
+            <h4>Segunda-feira</h4>
+            <p>11h às 13h</p>
+          </div>
+          <div class="schedule-item">
+            <h4>Quarta-feira</h4>
+            <p>11h às 13h</p>
+          </div>
+          <div class="schedule-item">
+            <h4>Sexta-feira</h4>
+            <p>19h às 21h</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h3>Agende sua Monitoria</h3>
+        <form id="monitoria-form" class="monitoria-form">
+          <div class="form-group">
+            <label for="dia-selecionado">Selecione o Dia e Horário</label>
+            <input
+              type="text"
+              id="dia-selecionado"
+              name="dia-selecionado"
+              readonly
+              placeholder="Clique para selecionar uma data"
+              required
+            />
+            <div id="calendar-container"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="nome-participante">Seu Nome Completo</label>
+            <input
+              type="text"
+              id="nome-participante"
+              name="nome-participante"
+              placeholder="Ex: João da Silva"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="materia">Matéria</label>
+            <select id="materia" name="materia" required>
+              <option value="">Selecione a matéria</option>
+              <option value="Linguagem de Programação">
+                Linguagem de Programação
+              </option>
+              <option value="Estrutura de Dados">Estrutura de Dados</option>
+              <option value="Outros">Outros</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submit-btn">Agendar via WhatsApp</button>
+          <div id="status-message" class="status-message"></div>
+        </form>
+      </section>
+    </main>
+
+    <a href="https://wa.me/5534997306154" class="whatsapp-btn" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
