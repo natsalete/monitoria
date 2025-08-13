@@ -3,8 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const statusMessage = document.getElementById('status-message');
     const diaSelecionadoInput = document.getElementById('dia-selecionado');
     const calendarContainer = document.getElementById('calendar-container');
+    const cursoSelect = document.getElementById('curso');
+    const outrosCursoContainer = document.getElementById('outros-curso-container');
+    const periodoSelect = document.getElementById('periodo');
+    const outrosPeriodoContainer = document.getElementById('outros-periodo-container');
 
-    // NÚMERO DO SEU WHATSAPP (com código do país e DDD, sem símbolos)
     const meuWhatsApp = '5534997306154'; 
 
     const availableDaysOfWeek = [1, 3, 5]; // 0=Domingo, 1=Segunda, 2=Terça, etc.
@@ -25,6 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', (event) => {
         if (!calendarContainer.contains(event.target) && event.target !== diaSelecionadoInput) {
             calendarContainer.style.display = 'none';
+        }
+    });
+
+    cursoSelect.addEventListener('change', (event) => {
+        if (event.target.value === 'Outro') {
+            outrosCursoContainer.style.display = 'flex';
+        } else {
+            outrosCursoContainer.style.display = 'none';
+        }
+    });
+
+    periodoSelect.addEventListener('change', (event) => {
+        if (event.target.value === 'Outro') {
+            outrosPeriodoContainer.style.display = 'flex';
+        } else {
+            outrosPeriodoContainer.style.display = 'none';
         }
     });
 
@@ -79,7 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         calendarContainer.appendChild(datesGrid);
 
-        document.querySelector('.prev-month').addEventListener('click', () => {
+        document.querySelector('.prev-month').addEventListener('click', (e) => {
+            e.stopPropagation(); // Impede que o calendário feche
             currentMonth--;
             if (currentMonth < 0) {
                 currentMonth = 11;
@@ -88,7 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
             renderCalendar(currentMonth, currentYear);
         });
 
-        document.querySelector('.next-month').addEventListener('click', () => {
+        document.querySelector('.next-month').addEventListener('click', (e) => {
+            e.stopPropagation(); // Impede que o calendário feche
             currentMonth++;
             if (currentMonth > 11) {
                 currentMonth = 0;
@@ -125,18 +146,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const diaSelecionado = diaSelecionadoInput.value;
         const nomeParticipante = document.getElementById('nome-participante').value;
+        let curso = cursoSelect.value;
+        if (curso === 'Outro') {
+            curso = document.getElementById('outros-curso').value;
+        }
+        let periodo = periodoSelect.value;
+        if (periodo === 'Outro') {
+            periodo = document.getElementById('outros-periodo').value;
+        }
         const materia = document.getElementById('materia').value;
 
-        if (!diaSelecionado || !nomeParticipante || !materia) {
+        if (!diaSelecionado || !nomeParticipante || !curso || !periodo || !materia) {
             statusMessage.textContent = 'Por favor, preencha todos os campos do formulário.';
             statusMessage.className = 'status-message error';
             return;
         }
 
         const mensagem = `Olá Natalia Salete, sou ${nomeParticipante} e gostaria de agendar uma monitoria.\n\n` +
-                         `Dia/Horário: ${diaSelecionado}\n` +
-                         `Matéria: ${materia}\n\n` +
-                         `Link da Reunião: https://meet.google.com/jjj-cfmm-cia\n\n` +
+                         `*Dados do Agendamento:*\n` +
+                         `Curso: ${curso}\n` +
+                         `Período: ${periodo}\n` +
+                         `Matéria: ${materia}\n` +
+                         `Dia/Horário: ${diaSelecionado}\n\n` +
+                         `*Link da Reunião:*\n` +
+                         `https://meet.google.com/jjj-cfmm-cia\n\n` +
                          `Por favor, me confirme o agendamento.`;
 
         const whatsappLink = `https://api.whatsapp.com/send?phone=${meuWhatsApp}&text=${encodeURIComponent(mensagem)}`;

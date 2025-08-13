@@ -1,337 +1,423 @@
 body {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f2f5;
-  color: #333;
-  line-height: 1.6;
-}
-
-.header {
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-bottom: 3px solid #004d40; /* Verde escuro do IFTM */
-}
-
-.header-container {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.logo {
-  width: 180px;
-  margin-bottom: 10px;
-}
-
-.header h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #004d40; /* Verde escuro do IFTM */
-}
-
-.main-content {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 0 20px;
-  display: grid;
-  gap: 30px;
-}
-
-.profile-card {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.profile-photo-container {
-  width: 150px;
-  height: 150px;
-  margin: 0 auto 15px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 4px solid #00796b; /* Verde IFTM */
-}
-
-.profile-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.profile-name {
-  margin: 0;
-  font-size: 1.8rem;
-  color: #004d40; /* Verde escuro IFTM */
-}
-
-.profile-role {
-  margin: 5px 0 0;
-  font-size: 1.1rem;
-  color: #666;
-}
-
-.schedule-section,
-.form-section {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.schedule-section h3,
-.form-section h3 {
-  margin-top: 0;
-  color: #004d40; /* Verde escuro IFTM */
-  border-bottom: 2px solid #eee;
-  padding-bottom: 10px;
-}
-
-.schedule-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  text-align: center;
-}
-
-.schedule-item {
-  background-color: #e0f2f1; /* Verde claro IFTM */
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #b2dfdb;
-}
-
-.schedule-item h4 {
-  margin: 0 0 5px;
-  font-size: 1.2rem;
-  color: #004d40; /* Verde escuro IFTM */
-}
-
-.schedule-item p {
-  margin: 0;
-  color: #333;
-}
-
-.monitoria-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  margin-bottom: 5px;
-  font-weight: 600;
-  color: #555;
-}
-
-.form-group input,
-.form-group select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.form-group small {
-  color: #777;
-  font-size: 0.85rem;
-  margin-top: 5px;
-}
-
-.submit-btn {
-  background-color: #00796b; /* Verde IFTM */
-  color: #fff;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.submit-btn:hover {
-  background-color: #004d40; /* Verde escuro IFTM */
-}
-
-.whatsapp-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background-color: #25d366;
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-  z-index: 1000;
-}
-
-.whatsapp-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.status-message {
-  text-align: center;
-  margin-top: 15px;
-  font-weight: 600;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.status-message.success {
-  background-color: #d4edda;
-  color: #155724;
-}
-
-.status-message.error {
-  background-color: #f8d7da;
-  color: #721c24;
-}
-
-@media (max-width: 768px) {
-  .header h1 {
-    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef1f5;
+    color: #333;
+    line-height: 1.6;
   }
-  .profile-card {
+  
+  .header {
+    background-color: #fff;
     padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid #004d40;
   }
+  
+  .header-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .logo {
+    width: 180px;
+    margin-bottom: 15px;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #004d40;
+  }
+  
+  .main-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    gap: 35px;
+  }
+  
+  .profile-card,
+  .schedule-section,
+  .form-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-card:hover,
+  .schedule-section:hover,
+  .form-section:hover {
+    transform: translateY(-5px);
+  }
+  
+  .profile-card {
+    text-align: center;
+  }
+  
+  .profile-photo-container {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #00796b;
+  }
+  
+  .profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
   .profile-name {
+    margin: 0;
+    font-size: 2rem;
+    color: #004d40;
+  }
+  
+  .profile-role {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .schedule-section h3,
+  .form-section h3 {
+    margin-top: 0;
+    color: #004d40;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
     font-size: 1.5rem;
   }
+  
   .schedule-grid {
-    grid-template-columns: 1fr;
-  }
-  .main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-  }
-}
-
-/* Estilos do Calendário */
-/* Estilos do Calendário */
-#calendar-container {
-  display: none;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  margin-top: 10px;
-  max-width: 100%;
-  box-sizing: border-box; /* Garante que o padding não aumente a largura total */
-}
-
-.calendar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.calendar-header button {
-  background-color: #e0f2f1;
-  border: 1px solid #b2dfdb;
-  color: #004d40;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.calendar-header h4 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #004d40;
-}
-
-.calendar-days,
-.calendar-dates {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  text-align: center;
-  gap: 5px;
-}
-
-.calendar-days div {
-  font-weight: 600;
-  color: #666;
-  padding: 8px 0;
-}
-
-.calendar-dates div {
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  /* Ajustes para responsividade */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.calendar-dates .inactive-day {
-  color: #ccc;
-  cursor: default;
-}
-
-.calendar-dates .available-day {
-  background-color: #f1f8e9;
-  color: #1b5e20;
-  border: 1px solid #c8e6c9;
-}
-
-.calendar-dates .available-day:hover {
-  background-color: #dcedc8;
-}
-
-.calendar-dates .selected-day {
-  background-color: #00796b;
-  color: #fff;
-  font-weight: bold;
-  border: 1px solid #004d40;
-}
-
-.footer {
-    background-color: #004d40; /* Verde escuro do IFTM */
-    color: #e0f2f1; /* Verde claro do IFTM */
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    font-size: 0.9rem;
-}
-
-.footer p {
+  }
+  
+  .schedule-item {
+    background-color: #e0f2f1;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #b2dfdb;
+    transition: background-color 0.3s ease;
+  }
+  
+  .schedule-item:hover {
+    background-color: #c8e6c9;
+  }
+  
+  .schedule-item h4 {
+    margin: 0 0 8px;
+    font-size: 1.3rem;
+    color: #004d40;
+  }
+  
+  .schedule-item p {
     margin: 0;
-}
-
-/* Ajustes para telas menores (celular) */
-@media (max-width: 768px) {
-  #calendar-container {
-    padding: 5px;
+    color: #333;
   }
-  .calendar-header h4 {
+  
+  .monitoria-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  
+  .form-group:last-of-type {
+    margin-bottom: 5px; /* Reduzido ainda mais o espaço antes do botão */
+  }
+  
+  .submit-btn {
+    background-color: #00796b;
+    color: #fff;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    margin-top: 5px; /* Pequena margem superior para o botão */
+  }
+  
+  .form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
   }
-  .calendar-dates div,
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: #00796b;
+  }
+  
+  .submit-btn {
+    background-color: #00796b;
+    color: #fff;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+  }
+  
+  .submit-btn:hover {
+    background-color: #004d40;
+  }
+  
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 65px;
+    height: 65px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 1000;
+  }
+  
+  .whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .status-message {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 8px;
+  }
+  
+  .status-message.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .status-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 1.4rem;
+    }
+    .profile-card,
+    .schedule-section,
+    .form-section {
+      padding: 20px;
+    }
+    .profile-name {
+      font-size: 1.8rem;
+    }
+    .schedule-grid {
+      grid-template-columns: 1fr;
+    }
+    .main-content {
+      gap: 25px;
+    }
+    .calendar-dates div,
+    .calendar-days div {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Estilos do Calendário - CORRIGIDO */
+  .form-group:has(#calendar-container) {
+    position: relative;
+  }
+  
+  #calendar-container {
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-top: 10px;
+    position: static;
+    z-index: 999;
+    width: 100%;
+    max-width: 450px; /* Largura máxima proporcional */
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto; /* Centraliza o calendário */
+  }
+  
+  /* Estilos específicos para desktop */
+  @media (min-width: 769px) {
+    #calendar-container {
+      max-width: 420px; /* Tamanho proporcional para desktop */
+    }
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .calendar-header button {
+    background-color: #e0f2f1;
+    border: 1px solid #b2dfdb;
+    color: #004d40;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Impede que os botões encolham */
+  }
+  
+  .calendar-header button:hover {
+    background-color: #b2dfdb;
+  }
+  
+  .calendar-header h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #004d40;
+    text-align: center;
+    flex-grow: 1; /* Permite que o título ocupe o espaço disponível */
+  }
+  
+  .calendar-days,
+  .calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 4px; /* Aumentado de 3px para 4px para melhor espaçamento */
+  }
+  
   .calendar-days div {
-    font-size: 0.35rem;
+    font-weight: 600;
+    color: #666;
+    padding: 8px 0;
+    font-size: 0.95rem;
   }
-}
+  
+  .calendar-dates div {
+    padding: 8px 4px; /* Voltou ao padding menor */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    min-height: 32px; /* Altura balanceada */
+    font-size: 0.95rem; /* Fonte um pouco menor */
+    font-weight: 500;
+  }
+  
+  .calendar-dates .inactive-day {
+    color: #ccc;
+    cursor: default;
+  }
+  
+  .calendar-dates .available-day {
+    background-color: #f1f8e9;
+    color: #1b5e20;
+    border: 1px solid #c8e6c9;
+  }
+  
+  .calendar-dates .available-day:hover {
+    background-color: #dcedc8;
+  }
+  
+  .calendar-dates .selected-day {
+    background-color: #00796b;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #004d40;
+  }
+  
+  /* Ajuste para mobile */
+  @media (max-width: 768px) {
+    #calendar-container {
+      padding: 10px;
+    }
+    
+    .calendar-dates div,
+    .calendar-days div {
+      font-size: 0.8rem;
+      padding: 6px 2px;
+    }
+    
+    .calendar-dates div {
+      min-height: 25px;
+    }
+    
+    .calendar-header h4 {
+      font-size: 1.1rem;
+    }
+    
+    .calendar-header button {
+      padding: 4px 8px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Estilos do Rodapé */
+  .footer {
+    background-color: #004d40;
+    color: #e0f2f1;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      padding: 20px 10px;
+      font-size: 0.8rem;
+    }
+  }
