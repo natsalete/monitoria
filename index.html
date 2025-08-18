@@ -1,127 +1,215 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monitoria Natalia Salete Rodrigues</title>
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-    <link rel="shortcut icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-    
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-x-icon"
+      href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    />
+
+    <!-- Google Fonts: Poppins for content, Inter as a fallback -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header class="header">
-        <div class="header-container">
-            <img src="https://iftm.edu.br/images/logo/Horizontal%20resumida.png" alt="Logo IFTM" class="logo">
-            <h1>Monitoria Natalia Salete Rodrigues</h1>
-        </div>
+      <div class="header-container">
+        <img
+          src="https://iftm.edu.br/images/logo/Horizontal%20resumida.png"
+          alt="Logo IFTM"
+          class="logo"
+        />
+        <h1>Monitoria Natalia Salete Rodrigues</h1>
+      </div>
     </header>
 
     <main class="main-content">
-        <section class="profile-card">
-            <div class="profile-photo-container">
-                <img src="https://avatars.githubusercontent.com/u/135389319?v=4" alt="Foto de Natalia Salete Rodrigues" class="profile-photo">
-            </div>
-            <h2 class="profile-name">Natalia Salete Rodrigues</h2>
-            <p class="profile-role">Monitora</p>
-        </section>
+      <section class="profile-card">
+        <div class="profile-photo-container">
+          <img
+            src="https://avatars.githubusercontent.com/u/135389319?v=4"
+            alt="Foto de Natalia Salete Rodrigues"
+            class="profile-photo"
+          />
+        </div>
+        <h2 class="profile-name">Natalia Salete Rodrigues</h2>
+        <p class="profile-role">Monitora</p>
+        <p class="profile-bio">
+          Estudante do 6º período de Análise e Desenvolvimento de Sistemas.
+          <br />
+          Consultora de ERP e desenvolvedora de Software na
+          <a
+            href="https://evasolucoes.com.br/"
+            target="_blank"
+            style="color: var(--color-iftm-green); text-decoration: none"
+            >Eva-Solucoes</a
+          >.
+        </p>
+        <div class="profile-socials">
+          <a
+            href="https://github.com/natsalete"
+            target="_blank"
+            aria-label="GitHub de Natalia Salete"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/natalia-salete-rodrigues"
+            target="_blank"
+            aria-label="LinkedIn de Natalia Salete"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </section>
 
-        <section class="schedule-section">
-            <h3>Horários Disponíveis</h3>
-            <div class="schedule-grid">
-                <div class="schedule-item">
-                    <h4>Segunda-feira</h4>
-                    <p>11h às 13h</p>
-                </div>
-                <div class="schedule-item">
-                    <h4>Quarta-feira</h4>
-                    <p>11h às 13h</p>
-                </div>
-                <div class="schedule-item">
-                    <h4>Sexta-feira</h4>
-                    <p>19h às 21h</p>
-                </div>
-            </div>
-        </section>
+      <section class="schedule-section">
+        <h3>Horários Disponíveis</h3>
+        <div class="schedule-grid">
+          <div class="schedule-item">
+            <h4>Segunda-feira</h4>
+            <p>11h às 13h</p>
+          </div>
+          <div class="schedule-item">
+            <h4>Quarta-feira</h4>
+            <p>11h às 13h</p>
+          </div>
+          <div class="schedule-item">
+            <h4>Sexta-feira</h4>
+            <p>19h às 21h</p>
+          </div>
+        </div>
+      </section>
 
-        <section class="form-section">
-            <h3>Agende sua Monitoria</h3>
-            <form id="monitoria-form" class="monitoria-form">
-                <div class="form-group">
-                    <label for="nome-participante">Seu Nome Completo</label>
-                    <input type="text" id="nome-participante" name="nome-participante" placeholder="Ex: João da Silva" required>
-                </div>
+      <section class="form-section">
+        <h3>Agende sua Monitoria</h3>
+        <form id="monitoria-form" class="monitoria-form">
+          <div class="form-group">
+            <label for="nome-participante">Seu Nome Completo</label>
+            <input
+              type="text"
+              id="nome-participante"
+              name="nome-participante"
+              placeholder="Ex: João da Silva"
+              required
+            />
+          </div>
 
-                <div class="form-group">
-                    <label for="curso">Curso</label>
-                    <select id="curso" name="curso" required>
-                        <option value="">Selecione seu curso</option>
-                        <option value="Engenharia Elétrica">Engenharia Elétrica</option>
-                        <option value="Análise e Desenvolvimento de Sistemas">Análise e Desenvolvimento de Sistemas</option>
-                        <option value="Outro">Outro</option>
-                    </select>
-                </div>
+          <div class="form-group">
+            <label for="curso">Curso</label>
+            <select id="curso" name="curso" required>
+              <option value="">Selecione seu curso</option>
+              <option value="Engenharia Elétrica">Engenharia Elétrica</option>
+              <option value="Análise e Desenvolvimento de Sistemas">
+                Análise e Desenvolvimento de Sistemas
+              </option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
 
-                <div class="form-group" id="outros-curso-container" style="display:none;">
-                    <label for="outros-curso">Qual curso?</label>
-                    <input type="text" id="outros-curso" name="outros-curso" placeholder="Digite o nome do curso">
-                </div>
+          <div class="form-group">
+            <label for="periodo">Período</label>
+            <select id="periodo" name="periodo" required>
+              <option value="">Selecione seu período</option>
+              <option value="1º">1º</option>
+              <option value="2º">2º</option>
+              <option value="3º">3º</option>
+              <option value="4º">4º</option>
+              <option value="5º">5º</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
 
-                <div class="form-group">
-                    <label for="periodo">Período</label>
-                    <select id="periodo" name="periodo" required>
-                        <option value="">Selecione seu período</option>
-                        <option value="1º">1º</option>
-                        <option value="2º">2º</option>
-                        <option value="3º">3º</option>
-                        <option value="4º">4º</option>
-                        <option value="5º">5º</option>
-                        <option value="Outro">Outro</option>
-                    </select>
-                </div>
+          <div
+            class="form-group"
+            id="outros-periodo-container"
+            style="display: none"
+          >
+            <label for="outros-periodo">Qual período?</label>
+            <input
+              type="text"
+              id="outros-periodo"
+              name="outros-periodo"
+              placeholder="Digite o período"
+            />
+          </div>
 
-                <div class="form-group" id="outros-periodo-container" style="display:none;">
-                    <label for="outros-periodo">Qual período?</label>
-                    <input type="text" id="outros-periodo" name="outros-periodo" placeholder="Digite o período">
-                </div>
+          <div class="form-group">
+            <label for="materia">Matéria</label>
+            <select id="materia" name="materia" required>
+              <option value="">Selecione a matéria</option>
+              <option value="Linguagem de Programação">
+                Linguagem de Programação
+              </option>
+              <option value="Estrutura de Dados">Estrutura de Dados</option>
+              <option value="Outros">Outros</option>
+            </select>
+          </div>
 
-                <div class="form-group">
-                    <label for="materia">Matéria</label>
-                    <select id="materia" name="materia" required>
-                        <option value="">Selecione a matéria</option>
-                        <option value="Linguagem de Programação">Linguagem de Programação</option>
-                        <option value="Estrutura de Dados">Estrutura de Dados</option>
-                        <option value="Outros">Outros</option>
-                    </select>
-                </div>
+          <div class="form-group">
+            <label for="dia-selecionado">Selecione o Dia e Horário</label>
+            <input
+              type="text"
+              id="dia-selecionado"
+              name="dia-selecionado"
+              readonly
+              placeholder="Clique para selecionar uma data"
+              required
+            />
+          </div>
 
-                <div class="form-group">
-                    <label for="dia-selecionado">Selecione o Dia e Horário</label>
-                    <input type="text" id="dia-selecionado" name="dia-selecionado" readonly placeholder="Clique para selecionar uma data" required>
-                    <div id="calendar-container"></div>
-                </div>
-                
-                <button type="submit" class="submit-btn">Agendar via WhatsApp</button>
-                <div id="status-message" class="status-message"></div>
-            </form>
-        </section>
+          <button type="submit" class="submit-btn">Agendar via WhatsApp</button>
+          <div id="status-message" class="status-message"></div>
+        </form>
+      </section>
     </main>
 
-    <a href="https://wa.me/5534997306154" class="whatsapp-btn" target="_blank" style="text-decoration: none;">
-        <i class="fab fa-whatsapp"></i>
+    <div id="calendar-overlay" class="calendar-overlay">
+      <div id="calendar-container"></div>
+    </div>
+
+    <a
+      href="https://wa.me/5534997306154"
+      class="whatsapp-btn"
+      target="_blank"
+      style="text-decoration: none"
+    >
+      <i class="fab fa-whatsapp"></i>
     </a>
 
     <footer class="footer">
-        <p>&copy; 2025 Natalia Salete Rodrigues. Todos os direitos reservados. Desenvolvido por Natalia Salete.</p>
+      <p>
+        &copy; 2025 Natalia Salete Rodrigues. Todos os direitos reservados.
+        Desenvolvido por Natalia Salete.
+      </p>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
